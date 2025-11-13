@@ -23,7 +23,7 @@ async function includePartials() {
   }));
 }
 
-/* — Numbers section. Counter animation — */
+ /* Numbers section. Counter animation */
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".numbers__value");
 
@@ -65,4 +65,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   counters.forEach(counter => observer.observe(counter));
 });
+
+
+/* Past Trades section. SWIPER */
+const pastSwiper = new Swiper(".pastSwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 24,
+  loop: true,
+  loopAdditionalSlides: 24,
+  allowTouchMove: false,
+  speed: 6000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false
+  }
+});
+
+
 

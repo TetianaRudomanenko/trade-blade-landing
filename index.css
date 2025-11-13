@@ -375,5 +375,71 @@ button {
 }
 
 
+/*Past Trades section */
+/* Past section container */
+.past {
+  width: 100%;
+  background: var(--bg-main-dark);
+  padding: 120px 0 180px;
+  position: relative;
+}
 
+.past::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 65vw;
+  max-width: 680px;
+  height: 60px;
+  background-image: url("images/rectangle-white.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 
+.past__title {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--text-main);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.past__status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8afca3;
+  font-size: 15px;
+  margin-bottom: 65px;
+}
+
+.past__status .dot {
+  width: 9px;
+  height: 9px;
+  background: #4AFF6F;
+  border-radius: 50%;
+}
+
+/* SWIPER */
+.pastSwiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.pastSwiper .swiper-slide {
+  width: 300px;
+  height: 210px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pastSwiper img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.pastSwiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}

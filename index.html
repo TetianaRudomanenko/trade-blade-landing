@@ -8,9 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
   <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
+
 <!-- Header will be loaded here -->
 <div data-include="partials/header.html"></div>
 
@@ -83,12 +86,57 @@
     </div>
   </section>
 
+  <!-- Past Trades section -->
+  <section class="past">
+    <div class="container past__container">
 
+      <h2 class="past__title">Прошедшие сделки</h2>
 
+      <div class="past__status">
+        <span class="dot"></span> Онлайн
+      </div>
 
+      <!-- SWIPER -->
+      <div class="swiper pastSwiper">
+        <div class="swiper-wrapper">
 
+          <div class="swiper-slide">
+            <img src="images/past-trades-section/past-trades__card_1.png" alt="card">
+          </div>
 
+          <div class="swiper-slide">
+            <img src="images/past-trades-section/past-trades__card_2.png" alt="card">
+          </div>
 
+          <div class="swiper-slide">
+            <img src="images/past-trades-section/past-trades__card_3.png" alt="card">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="images/past-trades-section/past-trades__card_4.png" alt="card">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="images/past-trades-section/past-trades__card_1.png" alt="card">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="images/past-trades-section/past-trades__card_2.png" alt="card">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="images/past-trades-section/past-trades__card_3.png" alt="card">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="images/past-trades-section/past-trades__card_4.png" alt="card">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 
 
@@ -96,6 +144,9 @@
 
 <!-- Footer will be loaded here -->
 <div data-include="partials/footer.html"></div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script src="./script.js" defer></script>
 </body>
