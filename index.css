@@ -177,6 +177,54 @@ button {
   margin-bottom: 20px;
 }
 
+.hero__title span {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(1.75);
+  text-shadow: 0 0 30px var(--accent), 0 0 55px var(--accent);
+  animation: neonDrop 0.65s ease-out forwards;
+}
+
+.hero__title span:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.hero__title span:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+.hero__title span:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes neonDrop {
+  0% {
+    opacity: 0;
+    transform: scale(1.55);
+    text-shadow: 0 0 36px var(--accent), 0 0 65px var(--accent);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1.28);
+    text-shadow: 0 0 28px var(--accent), 0 0 50px var(--accent);
+  }
+
+  60% {
+    transform: scale(1.12);
+    text-shadow: 0 0 16px var(--accent), 0 0 30px var(--accent);
+  }
+
+  85% {
+    transform: scale(1.04);
+    text-shadow: 0 0 8px var(--accent), 0 0 16px var(--accent);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: none;
+  }
+}
+
 .hero__desc {
   color: #C4C8D0;
   font-size: 16px;
