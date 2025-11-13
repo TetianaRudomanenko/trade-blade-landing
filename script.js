@@ -22,3 +22,47 @@ async function includePartials() {
     }
   }));
 }
+
+/* — Numbers section. Counter animation — */
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".numbers__value");
+
+  const animateValue = (element, target, duration = 3500) => { // медленнее
+  const startTime = performance.now();
+
+  const update = (currentTime) => {
+  const progress = Math.min((currentTime - startTime) / duration, 1);
+
+  const eased = 1 - Math.pow(2, -8 * progress);
+
+  const value = Math.floor(eased * target);
+  const formatted = value.toLocaleString("ru-RU");
+
+  element.textContent = element.dataset.percent ? formatted + "%" : formatted;
+
+  if (progress < 1) {
+  requestAnimationFrame(update);
+} else {
+  element.classList.remove("animate");
+}
+};
+
+  element.classList.add("animate");
+  requestAnimationFrame(update);
+};
+
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+  if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
+
+  entry.target.classList.add("counted");
+
+  const target = parseInt(entry.target.dataset.target);
+  animateValue(entry.target, target);
+}
+});
+}, { threshold: 1 });
+
+  counters.forEach(counter => observer.observe(counter));
+});
+

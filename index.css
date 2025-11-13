@@ -362,7 +362,18 @@ button {
   font-weight: 500;
   color: var(--bg-card);
   font-variant-numeric: slashed-zero;
+  transition:
+      transform 0.45s ease,
+      text-shadow 0.45s ease;
 }
+
+.numbers__value.animate {
+  transform: scale(1.12);
+  text-shadow:
+      0 0 4px rgba(106, 84, 255, 0.55),
+      0 0 8px rgba(106, 84, 255, 0.35);
+}
+
 
 
 
