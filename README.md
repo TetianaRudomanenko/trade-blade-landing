@@ -6,7 +6,7 @@ This is a responsive, modern landing page project developed using **HTML**, **CS
 - HTML5
 - CSS3 (Flexbox, Grid, Media Queries)
 - JavaScript (DOM Manipulation, Event Handling)
-- Web Fonts: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Web Fonts: [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)
 
 ## 🚀 Getting Started
 
