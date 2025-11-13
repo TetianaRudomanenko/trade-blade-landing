@@ -126,13 +126,27 @@ button {
   background: #6deaff;
 }
 
-
 /* Hero section */
 .hero {
   width: 100%;
   background: var(--bg-main-dark);
-  padding: 160px 0;
+  padding: 160px 0 180px;
   position: relative;
+  overflow: visible;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 65vw;
+  max-width: 680px;
+  height: 60px;
+  background-image: url("images/rectangle-white.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 10;
 }
 
 .hero__container {
@@ -246,4 +260,61 @@ button {
   height: auto;
   object-fit: contain;
 }
+
+/* Numbers section */
+.numbers {
+  width: 100%;
+  padding: 100px 0;
+  background: var(--bg-main-light);
+}
+
+.numbers__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.numbers__left {
+  width: 25%;
+}
+
+.numbers__title {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.numbers__date {
+  font-size: 16px;
+  color: #8f8f8f;
+}
+
+.numbers__grid {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.numbers__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.numbers__label {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.numbers__value {
+  font-size: 70px;
+  font-weight: 500;
+  color: var(--bg-card);
+  font-variant-numeric: slashed-zero;
+}
+
+
 
