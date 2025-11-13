@@ -1,29 +1,128 @@
 :root {
-    --bg-main-dark: #030718;
-    --bg-main-light: #FFFFFF;
-    --bg-card: #6A54FF;
-    --text-main: #ffffff;
-    --text-dark: #000000;
-    --text-muted: #030718;
-    --accent: #57E1FF;
+  --bg-main-dark: #030718;
+  --bg-main-light: #FFFFFF;
+  --bg-card: #6A54FF;
+  --text-main: #ffffff;
+  --text-dark: #000000;
+  --text-muted: #030718;
+  --accent: #57E1FF;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'IBM Plex Sans', sans-serif;
-    line-height: 1.6;
-    color: var(--bg-main-dark);
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+button {
+  font-family: inherit;
 }
 
 .container {
-    max-width: 1200px;
-    width: 100%;
-    margin-inline: auto;
-    padding-inline: 20px; 
+  max-width: 1440px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 20px;
 }
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 5px 0;
+  background: var(--bg-main-dark);
+}
+
+.header__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 130px;
+  height: 65px;
+}
+
+.header__nav {
+  width: 50%;
+  text-transform: uppercase;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  text-decoration: none;
+  color: var(--text-main);
+  padding: 6px 10px;
+  transition: 0.2s;
+}
+
+.header__nav a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent), 0 0 16px var(--accent);
+  transform: scale(1.1);
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu__btn-login,
+.menu__btn-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 24px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu__btn-login:hover,
+.menu__btn-register:hover {
+  box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent);
+  transform: translateY(-1px) scale(1.03);
+}
+
+.menu__btn-login {
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 4px 0 #57E1FF;
+  background: #57E1FF33;
+  color: var(--accent);
+}
+
+.menu__btn-login:hover {
+  background: rgba(87, 225, 255, 0.1);
+}
+
+.menu__btn-register {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 4px 0 #57E1FF;
+  color: var(--text-muted);
+}
+
+.menu__btn-register:hover {
+  background: #6deaff;
+}
+
