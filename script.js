@@ -17,9 +17,63 @@ async function includePartials() {
       console.error('Include error:', url, e);
     }
   }));
+
+
+  /* Burger menu*/
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.mobile-menu');
+  const closeMenu = document.querySelector('.mobile-menu__close');
+  const links = document.querySelectorAll('.mobile-menu__nav a');
+
+  if (!burger || !menu || !closeMenu) return;
+
+  burger.addEventListener('click', () => {
+    menu.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeMenu.addEventListener('click', () => {
+    menu.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!menu.classList.contains('active')) return;
+
+    const clickInsideMenu =
+      e.target.closest('.mobile-menu') ||
+      e.target.closest('.burger');
+
+    if (!clickInsideMenu) {
+      menu.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('active')) {
+      menu.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
 }
 
- /* Numbers section. Counter animation */
+  document.querySelectorAll('.mobile-menu__nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+
+
+  /* Numbers section. Counter animation */
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".numbers__value");
 
