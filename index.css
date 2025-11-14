@@ -1252,7 +1252,7 @@ button {
 
 
 /* ===============
-Responsive design
+  Responsive design
 ==================== */
 
 html, body {
@@ -1383,7 +1383,7 @@ section, div {
     }
 
     .hero__title {
-      font-size: clamp(26px, 5vw, 42px);
+      font-size: clamp(28px, 7vw, 42px);
       line-height: 1.15;
       font-weight: 700;
       margin-bottom: 14px;
@@ -1421,15 +1421,54 @@ section, div {
     }
   }
 
+@media (max-width: 768px) {
+  .hero__image img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
 
+/* Numbers section */
+@media (max-width: 1200px) {
 
-  /* NUMBERS */
-  .numbers__grid {
-    flex-direction: column;
-    gap: 40px;
+  .numbers__title {
+    font-size: clamp(30px, 5vw, 40px);
   }
 
-  /* ABOUT */
+  .numbers__date {
+    font-size: 15px;
+  }
+
+  .numbers__label {
+    font-size: 14px;
+  }
+
+  .numbers__value {
+    font-size: clamp(36px, 6vw, 55px);
+  }
+}
+
+@media (max-width: 748px) {
+
+  .numbers {
+    padding: 50px 0;
+  }
+  .numbers__container {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .numbers__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 45px;
+    width: 100%;
+  }
+}
+
+/* ABOUT */
   .about__container {
     flex-direction: column;
     gap: 40px;
@@ -1566,8 +1605,7 @@ section, div {
     }
 
     .footer__logo {
-      max-width: 150px;
-      margin: 0 auto;
+      display: none;
     }
 
     .footer__copy {
@@ -1575,7 +1613,7 @@ section, div {
       margin-top: 10px;
       text-align: center;
     }
-  }}
+  }
 
 
 
