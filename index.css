@@ -1645,17 +1645,17 @@ section, div {
 }
 
 /* Tariffs section */
-  .tariffs {
-    padding: 80px 0;
-  }
-
+@media (min-width: 1025px) {
   .tariff-block {
-    flex-direction: column;
+    flex-direction: row !important;
+    justify-content: space-between;
   }
 
   .tariff-card {
-    width: 100%;
+    width: 48% !important;
+    max-width: 415px;
   }
+}
 
   /* FAQ */
   .faq__title{
@@ -1679,10 +1679,6 @@ section, div {
   }
 
   /* Start now */
-/* ============================
-   START-NOW — адаптив как в ABOUT
-============================ */
-
 @media (max-width: 520px) {
 
   .start-now {
@@ -1827,6 +1823,56 @@ section, div {
       text-align: center;
     }
   }
+
+/*Mobile menu*/
+@media (max-width: 480px) {
+
+  .mobile-menu {
+    padding: 12px 20px;
+  }
+
+  .mobile-menu__close {
+    font-size: 30px;
+  }
+
+  .mobile-menu__nav {
+    margin-top: 25px;
+    gap: 22px;
+  }
+
+  .mobile-menu__nav a {
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  .mobile-menu__btn-register,
+  .mobile-menu__btn-login {
+    height: 46px;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .mobile-menu__nav {
+    gap: 18px;
+  }
+
+  .mobile-menu__nav a {
+    font-size: 18px;
+  }
+
+  .mobile-menu__buttons {
+    gap: 10px;
+  }
+
+  .mobile-menu__btn-register,
+  .mobile-menu__btn-login {
+    height: 42px;
+    font-size: 14px;
+  }
+}
 
 
 
