@@ -82,4 +82,51 @@ const pastSwiper = new Swiper(".pastSwiper", {
 });
 
 
+/* Tariffs section. Tabs */
+const switchButtons = document.querySelectorAll(".switch-btn");
+const spotBlock = document.getElementById("spot-tariffs");
+const futuresBlock = document.getElementById("futures-tariffs");
 
+switchButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    switchButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    if (btn.dataset.type === "spot") {
+      spotBlock.classList.remove("hidden");
+      futuresBlock.classList.add("hidden");
+    } else {
+      futuresBlock.classList.remove("hidden");
+      spotBlock.classList.add("hidden");
+    }
+
+  });
+});
+
+
+/* Tariff: dynamic price calculation */
+function initTariffPrices() {
+  const selects = document.querySelectorAll('.tariff-period');
+
+  selects.forEach(select => {
+    const priceWrapper = select.closest('.price');
+    const priceEl = priceWrapper.querySelector('.price-value');
+    const base = Number(priceEl.dataset.base);
+
+    const updatePrice = () => {
+      const months = Number(select.value);
+      const monthly = base / 12;
+      const newPrice = Math.round(monthly * months);
+      priceEl.textContent = `$${newPrice}`;
+    };
+
+    updatePrice();
+
+    select.addEventListener('change', updatePrice);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initTariffPrices();
+});

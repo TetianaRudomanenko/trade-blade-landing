@@ -557,3 +557,204 @@ button {
   transform: translateY(-1px) scale(1.03);
 }
 
+
+/* Tariffs section */
+.tariffs {
+  background: #030718;
+  padding: 140px 0;
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+}
+
+.tariffs .container {
+  max-width: 900px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tariffs__title {
+  font-size: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.tariffs__switch {
+  display: flex;
+  background: #18203A;
+  width: max-content;
+  padding: 6px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.switch-btn {
+  padding: 10px 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  color: #57E1FF;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+.switch-btn.active {
+  background: #57E1FF;
+  color: #000;
+}
+
+.tariffs__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.tariff-block {
+  display: flex;
+  gap: 40px;
+}
+
+.tariff-block.hidden {
+  display: none;
+}
+
+.tariff-card {
+  width: 48%;
+  max-width: 415px;
+  background: #0A0F24;
+  padding: 24px;
+  border-radius: 12px;
+  border: 0.5px solid #6A54FF;
+  display: flex;
+  flex-direction: column;
+}
+
+.tariff-card.vip {
+  background: var(--bg-card);
+}
+
+.tariff-card h3 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.tariff-card ul {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.tariff-card ul li {
+  position: relative;
+  padding-left: 26px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+
+}
+
+.tariff-card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  background-image: url("./images/checkmark.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tariff-period {
+  width: 128px;
+  margin-left: auto;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #FFFFFF33 url("./images/dropdown.svg") no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  appearance: none;
+  color: var(--text-main);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tariff-period:focus,
+.tariff-period:focus-visible,
+.tariff-period:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.tariff-period:-moz-focusring {
+  outline: none !important;
+}
+
+.price {
+  font-size: 34px;
+  display: flex;
+  align-items: center !important;
+  gap: 5px;
+  margin-bottom: 5px;
+  margin-top: auto;
+}
+
+.price small {
+  font-size: 18px;
+  color: #3aff3a;
+  margin-top: -20px;
+}
+
+.try-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #8EE8FF;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.try-main {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 20px;
+}
+
+.try-sub {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.5);
+  line-height: 1.2;
+}
+
+.try-btn:hover {
+  box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent);
+  transform: translateY(-1px) scale(1.03);
+}
+
+
+
+
