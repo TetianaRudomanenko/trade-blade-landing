@@ -821,14 +821,19 @@ button {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
+
   background: #6A54FF;
   color: #fff;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 0 30px;
+  box-sizing: border-box;
 
   transition:
       max-height 0.45s ease,
@@ -836,9 +841,12 @@ button {
 }
 
 .faq-item.active .faq-answer {
+  max-height: 500px;
   opacity: 1;
-  padding: 20px 30px 26px;
+  padding-top: 5px;
+  padding-bottom: 26px;
 }
+
 
 /* Start Now section */
 .start-now {
