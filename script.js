@@ -130,3 +130,30 @@ function initTariffPrices() {
 document.addEventListener("DOMContentLoaded", () => {
   initTariffPrices();
 });
+
+
+/* FAQ accordion */
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".faq-item");
+
+  items.forEach(item => {
+    const btn = item.querySelector(".faq-question");
+    const content = item.querySelector(".faq-answer");
+
+    btn.addEventListener("click", () => {
+      const isOpen = item.classList.contains("active");
+
+      items.forEach(i => {
+        i.classList.remove("active");
+        const c = i.querySelector(".faq-answer");
+        c.style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        item.classList.add("active");
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+});
+
