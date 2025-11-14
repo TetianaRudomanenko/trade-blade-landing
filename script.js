@@ -4,10 +4,6 @@
  */
 document.addEventListener('DOMContentLoaded', async () => {
   await includePartials();
-  initSmoothScroll();
-  initBurger();
-  initModals();
-  initForms();
 });
 
 async function includePartials() {
@@ -72,12 +68,12 @@ const pastSwiper = new Swiper(".pastSwiper", {
   slidesPerView: "auto",
   spaceBetween: 24,
   loop: true,
-  loopAdditionalSlides: 24,
+  loopedSlides: 8,
+  speed: 5000,
   allowTouchMove: false,
-  speed: 6000,
   autoplay: {
     delay: 0,
-    disableOnInteraction: false
+    disableOnInteraction: false,
   }
 });
 
