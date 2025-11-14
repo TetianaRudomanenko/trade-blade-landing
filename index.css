@@ -557,6 +557,73 @@ button {
   transform: translateY(-1px) scale(1.03);
 }
 
+/* Tradeblade section */
+.tb-info {
+  background: #030718;
+  padding: 140px 0;
+  color: var(--text-main);
+}
+
+.tb-info__container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px 120px;
+}
+
+.tb-info__left {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tb-info__title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.tb-info__right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px 70px;
+}
+
+.tb-info__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  max-width: 500px;
+}
+
+.tb-info__item--wide {
+  grid-column: span 2;
+}
+
+.tb-info__icon {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+}
+
+.tb-info__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tb-info__item-title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.tb-info__text {
+  max-width: 330px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27px;
+  opacity: 0.9;
+}
 
 /* Tariffs section */
 .tariffs {
