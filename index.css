@@ -505,7 +505,7 @@ button {
 .about__form {
   max-width: 500px;
   height: 60px;
-  background: #3F34A0; /* тёмно-фиолетовый как в макете */
+  background: #3F34A0;
   border-radius: 6px;
   padding: 4px;
   display: flex;
@@ -598,6 +598,7 @@ button {
   cursor: pointer;
   font-size: 17px;
   font-weight: 600;
+  text-transform: uppercase;
   color: #57E1FF;
   border-radius: 6px;
   transition: 0.25s;
@@ -642,6 +643,7 @@ button {
   font-size: 32px;
   font-weight: 500;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .tariff-card ul {
@@ -739,6 +741,7 @@ button {
   font-weight: 500;
   color: var(--text-dark);
   line-height: 20px;
+  text-transform: uppercase;
 }
 
 .try-sub {
