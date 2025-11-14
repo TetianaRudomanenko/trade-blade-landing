@@ -443,3 +443,117 @@ button {
 .pastSwiper .swiper-wrapper {
   transition-timing-function: linear !important;
 }
+
+/* About section */
+.about {
+  width: 100%;
+  background: var(--bg-main-light);
+  padding: 120px 0 120px;
+}
+
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about__left {
+  width: 45%;
+}
+
+.about__title {
+  font-size: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: var(--text-dark);
+}
+
+.about__text {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--text-dark);
+  margin-bottom: 22px;
+  max-width: 420px;
+}
+
+.about__right {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.about__card {
+  width: 100%;
+  max-width: 630px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 40px 20px;
+  color: var(--text-main);
+}
+
+.about__card-title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.about__form {
+  max-width: 500px;
+  height: 60px;
+  background: #3F34A0; /* тёмно-фиолетовый как в макете */
+  border-radius: 6px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.about__form input {
+  flex: 1;
+  height: 100%;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  padding-left: 16px;
+  color: #fff;
+  outline: none;
+}
+
+.about__form input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.about__form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  padding: 0 34px;
+
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  background: #8EE8FF;
+  border: 1px solid #8EE8FF;
+  color: #000;
+
+  border-radius: 6px;
+  box-shadow: 0 0 4px 0 #57E1FF;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.about__form button:hover {
+  background: #A9F2FF;
+  box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent);
+  transform: translateY(-1px) scale(1.03);
+}
+

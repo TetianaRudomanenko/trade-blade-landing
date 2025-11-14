@@ -37,6 +37,7 @@
         <form class="hero__form">
           <input
               type="email"
+              id="hero-form"
               placeholder="ВАШ E–MAIL"
               required
               pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
@@ -137,6 +138,47 @@
 
     </div>
   </section>
+
+  <!-- About section -->
+  <section class="about">
+    <div class="container about__container">
+
+      <div class="about__left">
+        <h2 class="about__title">О компании</h2>
+
+        <p class="about__text">
+          Мы опытная команда, для которой трейдинг – профессия. TradeBlade является авторизованным
+          официальным брокером биржи Binance.
+        </p>
+
+        <p class="about__text">
+          Он предоставляет пользователям множество преимуществ, таких как более высокая скорость синхронизации API
+          и возможность создать учётную запись Binance через платформу TradeBlade всего в 1 клик.
+        </p>
+      </div>
+
+      <div class="about__right">
+        <div class="about__card">
+          <p class="about__card-title">
+            Попробуйте сейчас и получите<br>5 дней бесплатного пользования
+          </p>
+
+          <form id="about-form" class="about__form" novalidate>
+            <input
+                id="about-email"
+                type="email"
+                placeholder="ВАШ E–MAIL"
+                required
+                pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+            >
+            <button type="submit">ПОПРОБОВАТЬ</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
 
 
