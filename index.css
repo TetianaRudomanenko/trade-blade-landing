@@ -1468,6 +1468,22 @@ section, div {
   }
 }
 
+/*Past trades*/
+@media (max-width: 1200px) {
+  .past__title {
+    font-size: clamp(26px, 5vw, 42px);
+    line-height: 1.15;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 748px) {
+  .past {
+    padding: 80px 0;
+  }
+}
+
+
 /* ABOUT */
   .about__container {
     flex-direction: column;
