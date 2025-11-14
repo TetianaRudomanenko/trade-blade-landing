@@ -207,3 +207,47 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+/* --- FORMS: send email to PHP --- */
+function initEmailForm(selector) {
+  const form = document.querySelector(selector);
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const input = form.querySelector("input[type='email']");
+    const email = input.value.trim();
+
+    if (!email) return;
+
+    const formData = new FormData();
+    formData.append("email", email);
+
+    try {
+      const res = await fetch("send.php", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await res.json();
+
+      if (data.status === "success") {
+        input.value = "";
+        alert("Ваш email успешно отправлен!");
+      } else {
+        alert(data.message || "Ошибка отправки");
+      }
+    } catch (err) {
+      alert("Ошибка соединения");
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initEmailForm(".hero__form");
+  initEmailForm("#about-form");
+  initEmailForm("#start-now-form");
+});
+
+
