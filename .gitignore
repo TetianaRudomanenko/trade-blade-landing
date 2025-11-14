@@ -1,0 +1,10 @@
+# JetBrains IDE files
+.idea/
+*.iml
+
+# HTTP client history
+httpRequests/
+
+# OS junk files
+.DS_Store
+Thumbs.db
