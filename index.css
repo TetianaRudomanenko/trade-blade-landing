@@ -908,6 +908,81 @@ button {
   transform: translateY(-1px) scale(1.03);
 }
 
+/* Footer */
+.footer {
+  width: 100%;
+  background: #030718;
+  color: var(--text-main);
+  padding: 0;
+
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer__nav-title {
+  font-size: 16px;
+  color: #8c8f9a;
+  text-transform: uppercase;
+  margin-bottom: 150px;
+}
+
+.footer__nav {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.footer__nav li a {
+  color: var(--text-main);
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.2s;
+  text-transform: uppercase;
+}
+
+.footer__nav li a:hover {
+  color: #57E1FF;
+}
+
+.footer__right {
+  text-align: right;
+}
+
+.footer__logo {
+  width: 180px;
+  margin-bottom: 150px;
+  margin-top: 30px;
+}
+
+.footer__copy {
+  color: #9aa0ad;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 25px;
+}
+
+.footer__divider {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  height: 310px;
+  align-self: flex-start;
+  margin-top: 0;
+  margin-bottom: auto;
+  margin-inline: 60px;
+}
+
 
 
 
