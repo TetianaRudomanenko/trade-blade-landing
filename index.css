@@ -57,7 +57,7 @@ button {
 }
 
 .header__nav {
-  width: 50%;
+  width: 55%;
   text-transform: uppercase;
 }
 
@@ -224,7 +224,7 @@ button {
   color: #8DEBFF;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .header__nav,
   .header__buttons {
     display: none;
@@ -1251,9 +1251,6 @@ button {
 }
 
 
-
-
-
 /* ===============
 Responsive design
 ==================== */
@@ -1281,6 +1278,7 @@ section, div {
   .container {
     padding-inline: 16px;
   }
+
 
   .numbers__container,
   .about__container,
@@ -1340,37 +1338,90 @@ section, div {
   .header__row {
     padding-inline: 4px;
   }
+
   .logo {
     width: 110px;
     height: auto;
   }
+}
 
-  /* HERO */
-  .hero {
-    padding: 120px 0 140px;
-    overflow: hidden;
+  /* Hero section */
+  @media (max-width: 1148px) {
+
+    .hero {
+      padding: 80px 0 60px;
+    }
+
+    .hero__container {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      gap: 24px;
+    }
+
+    .hero__right,
+    .hero__image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero__image img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .hero__left {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero__title {
+      font-size: clamp(26px, 5vw, 42px);
+      line-height: 1.15;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .hero__desc {
+      font-size: 15px;
+      line-height: 20px;
+      max-width: 340px;
+      margin-bottom: 22px;
+    }
+
+    .hero__form {
+      width: 100%;
+      height: 56px;
+      display: flex;
+      padding: 4px;
+      gap: 6px;
+    }
+
+    .hero__form input {
+      flex: 1;
+      font-size: 15px;
+      padding-left: 14px;
+    }
+
+    .hero__form button {
+      padding: 0 24px;
+      font-size: 14px;
+    }
+
+    .hero__small {
+      margin-top: 8px;
+      font-size: 13px;
+    }
   }
 
-  .hero__container {
-    flex-direction: column;
-    gap: 40px;
-  }
 
-  .hero__left,
-  .hero__right {
-    width: 100%;
-  }
-
-  .hero__title {
-    font-size: 36px;
-    line-height: 42px;
-  }
-
-  .hero__image img {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
 
   /* NUMBERS */
   .numbers__grid {
@@ -1434,28 +1485,7 @@ section, div {
     width: 100%;
   }
 
-  /* FOOTER */
-  /* ============================
-      FOOTER — MOBILE FIX
-===============================*/
-
-  /* ============================================
-      FOOTER — НОВЫЙ АДАПТИВ ДО 1147PX
-============================================ */
-
-  /* =======================================================
-      FOOTER: ВСЕ ПУНКТЫ МЕНЮ — ВСЕГДА В ОДИН СТОЛБЕЦ
-========================================================= */
-
-  /* ==========================================================
-   FOOTER — LEVEL 1 (DESKTOP ≥1148px)
-   Ничего не меняем ― действует твой текущий стиль
-========================================================== */
-
-
-  /* ==========================================================
-     FOOTER — LEVEL 2 (TABLET 768px–1147px)
-  ========================================================== */
+  /* Footer */
   @media (max-width: 1147px) and (min-width: 768px) {
 
     .footer {
