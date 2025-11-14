@@ -837,6 +837,78 @@ button {
   padding: 20px 30px 26px;
 }
 
+/* Start Now section */
+.start-now {
+  padding: 50px 0;
+  background: #6A54FF;
+}
+
+.start-now__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.start-now__title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  color: var(--text-main);
+  max-width: 600px;
+}
+
+.start-now__form {
+  display: flex;
+  align-items: center;
+  background: #4C3CC0;
+  padding: 6px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 525px;
+  height: 68px;
+}
+
+.start-now__form input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding-left: 18px;
+  font-size: 18px;
+  color: var(--text-main);
+}
+
+.start-now__form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.start-now__form button {
+  height: 100%;
+  padding: 0 24px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  background: #9EEAFF;
+  color: var(--text-dark);
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.start-now__form button:hover {
+  background: #bdf4ff;
+  box-shadow: 0 0 12px #57E1FF, 0 0 24px #57E1FF;
+  transform: translateY(-1px) scale(1.03);
+}
+
+
 
 
 
